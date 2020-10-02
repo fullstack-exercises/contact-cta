@@ -1,0 +1,118 @@
+/// Variables
+// Colors
+$color-white: #ffffff;
+$color-black: #2a2a2a;
+$color-grey: #a7a7a7;
+$color-light-grey: #ddd;
+$color-dark-grey: #565656;
+$color-green: #00bf2c;
+$color-red: #f34149;
+// Font-size
+$font-size: 16px;
+// Space
+$space: 15px;
+$space-s: $space * 0.5;
+$space-m: $space * 1.5;
+$space-l: $space * 2;
+// General
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: $color-black;
+    font-size: $font-size;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+// Button
+.btn {
+    padding: 9px 48px;
+    border: 1px solid $color-dark-grey;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        background: $color-dark-grey;
+        border: 1px solid $color-dark-grey;
+        color: $color-white;
+    }
+}
+
+// Card
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.08);
+    width: 330px;
+    margin-right: $space;
+    .card__inner {
+        font-size: 15px;
+        padding: $space;
+        * {
+            margin: 0;
+        }
+        .card__title {
+            font-weight: bold;
+            margin-bottom: $space-s;
+            line-height: 1.5;
+            position: relative;
+            h2 {
+                font-size: 19px;
+            }
+            .card__subtitle {
+                color: $color-grey;
+                font-weight: 400;
+            }
+            .card__avatar {
+                img {
+                    width: 42px;
+                    height: 42px;
+                    position: absolute;
+                    right: 0;
+                    top: $space-s;
+                }
+            }
+        }
+        .card__text {
+            color: $color-dark-grey;
+        }
+    }
+    .card__cta {
+        margin-top: $space-s;
+        border-top: 1px solid $color-light-grey;
+        padding: $space;
+        min-height: 35px;
+        display: flex;
+        align-items: center;
+        a {
+            &:nth-of-type(1) {
+                color: $color-green;
+                border-color: $color-green;
+                border-right: 0px;
+                border-radius: 5px 0px 0px 5px;
+                &:hover {
+                    background-color: $color-green;
+                    color: $color-white;
+                }
+            }
+            &:nth-of-type(2) {
+                color: $color-red;
+                border-color: $color-red;
+                border-radius: 0px 5px 5px 0px;
+                &:hover {
+                    background-color: $color-red;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
